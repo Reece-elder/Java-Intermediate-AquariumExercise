@@ -1,0 +1,12 @@
+CREATE database aquarium;
+
+USE aquarium;
+
+CREATE TABLE fish (
+id int NOT NULL AUTO_INCREMENT,
+type VARCHAR(30) NOT NULL,
+colour VARCHAR(20) NOT NULL,
+length int NOT NULL,
+cost float NOT NULL
+PRIMARY KEY(id)
+);
