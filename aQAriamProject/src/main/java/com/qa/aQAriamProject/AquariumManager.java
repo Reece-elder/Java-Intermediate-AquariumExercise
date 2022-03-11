@@ -17,7 +17,7 @@ public class AquariumManager {
 
 	public boolean addFish(Fish fish) {
 		try {
-			String query = "INSERT INTO aquarium (type, colour, length, cost) VALUES (?,?,?,?);";
+			String query = "INSERT INTO fish (type, colour, length, cost) VALUES (?,?,?,?);";
 			preState = conn.prepareStatement(query);
 
 			preState.setString(1, fish.getType());
@@ -36,7 +36,7 @@ public class AquariumManager {
 	public Fish getFishId(int id) {
 		try {
 
-			String query = "SELECT * FROM aquarium WHERE id = ?";
+			String query = "SELECT * FROM fish WHERE id = ?";
 			preState = conn.prepareStatement(query);
 			preState.setInt(1, id);
 
