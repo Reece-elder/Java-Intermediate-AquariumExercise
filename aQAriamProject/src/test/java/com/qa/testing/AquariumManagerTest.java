@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.qa.aQAriamProject.AquariumManager;
@@ -23,7 +24,7 @@ public class AquariumManagerTest {
 	Fish fish1 = new Fish("type1", "colour1", 1, 1.1f);
 	Fish fish2 = new Fish("type2", "colour2", 2, 2.1f);
 	
-	@BeforeAll
+	@BeforeEach
 	public void setup() throws SQLException {
 		testState = testConn.prepareStatement("TRUNCATE aquarium;");
 		testState.execute();

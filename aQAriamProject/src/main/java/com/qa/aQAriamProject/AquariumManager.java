@@ -24,7 +24,7 @@ public class AquariumManager {
 			preState.setString(2, fish.getColour());
 			preState.setInt(3, fish.getLength());
 			preState.setFloat(4, fish.getCost());
-			preState.executeQuery();
+			preState.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
@@ -36,7 +36,7 @@ public class AquariumManager {
 	public Fish getFishId(int id) {
 		try {
 
-			String query = "SELECT * aquarium WHERE id = ?";
+			String query = "SELECT * FROM aquarium WHERE id = ?";
 			preState = conn.prepareStatement(query);
 			preState.setInt(1, id);
 
