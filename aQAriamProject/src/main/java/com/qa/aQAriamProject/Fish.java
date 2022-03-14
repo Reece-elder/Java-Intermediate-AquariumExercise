@@ -104,4 +104,12 @@ public class Fish {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Fish [id=" + id + ", type=" + type + ", colour=" + colour + ", length=" + length + ", cost=" + cost
+				+ "]";
+	}
+
+
 }

@@ -6,17 +6,20 @@ import java.sql.ResultSet;
 
 public class DBManager {
 
+	// When testing the app, using a testDatabase 
+	final String TEST_DB_URL = "jdbc:mysql://localhost:3306/testAquarium";
+	
 	final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	final String DB_URL = "jdbc:mysql://localhost:3306/<enter database>";
-	final String USER = "<enter username>";
-	final String PASSWORD = "<enter password>";
+	final String DB_URL = "jdbc:mysql://localhost:3306/aquarium";
+	final String USER = "root";
+	final String PASSWORD = "root";
 
 	Connection conn;
 
 	public Connection connectDB() {
 		try {
 			Class.forName(JDBC_DRIVER);
-			conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+			conn = DriverManager.getConnection(TEST_DB_URL, USER, PASSWORD);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return conn;
