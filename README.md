@@ -13,6 +13,7 @@ Once you've got this data on your own repo or account you need to check through 
 
 By the end of this exercise day you should have done the following:
 
+- Create a Controller class pls
 - Set up a MySQL database using the supplied SQL queries
 - Set up a test database
 - Completed the TODO methods in AquariumManager
